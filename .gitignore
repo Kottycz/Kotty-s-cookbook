@@ -1,0 +1,28 @@
+# Databázové heslo - NIKDY na GitHub!
+php/src/db_config.php
+
+# Nahrané obrázky uživatelů
+assets/images/*.jpg
+assets/images/*.jpeg
+assets/images/*.png
+assets/images/*.gif
+assets/images/*.webp
+!assets/images/logo.png
+!assets/images/logo2.png
+!assets/images/background*.jpg
+!assets/images/background*.jpeg
+!assets/images/background*.png
+!assets/images/polevky.jpeg
+!assets/images/hlavni-jidla.jpeg
+!assets/images/testoviny.jpg
+!assets/images/dezerty.jpg
+!assets/images/salaty.jpeg
+!assets/images/snidane.jpg
+!assets/images/recky-salat.jpg
+
+# Databázové soubory
+php/database/*.db
+
+# PHP/systémové
+.DS_Store
+Thumbs.db
