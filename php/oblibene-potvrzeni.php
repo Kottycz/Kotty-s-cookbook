@@ -6,7 +6,8 @@ require_once __DIR__ . '/src/bootstrap.php';
 
 $favorites = new Favorites();
 
-$pageTitle      = 'Recept přidán – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Přidáno do oblíbených – Kottyho kuchařka';
+$pageDescription = 'Recept byl přidán do vašich oblíbených na Kottyho kuchařce.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/oblibene-potvrzeni.php';

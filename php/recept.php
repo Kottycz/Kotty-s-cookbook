@@ -66,8 +66,9 @@ if ($recipe->isPrivate()) {
 $ingredients    = $recipeRepo->getIngredients($recipe->id);
 $steps          = $recipeRepo->getSteps($recipe->id);
 $isFavorite     = $favorites->contains($recipe->id);
-$pageTitle      = $recipe->name . ' – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = $recipe->name . ' – Kottyho kuchařka';
+$pageDescription = $recipe->description !== '' ? mb_strimwidth($recipe->description, 0, 160, '…') : 'Recept ' . $recipe->name . ' na Kottyho kuchařce.';
+$favoritesCount  = $favorites->count();
 $recipeFlash    = $_SESSION['recipe_flash'] ?? null;
 unset($_SESSION['recipe_flash']);
 

@@ -44,7 +44,8 @@ if ($recipe === null) {
     $steps       = $recipeRepo->getSteps($recipe->id);
 }
 
-$pageTitle      = 'Schválení receptu – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Schválení receptu – Kottyho kuchařka';
+$pageDescription = 'Administrace – schválení nového receptu na Kottyho kuchařce.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/schvalit-recept.php';

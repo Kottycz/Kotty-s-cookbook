@@ -10,8 +10,9 @@
  *   $favoritesCount (int) – počet receptů v oblíbených (výchozí 0)
  */
 
-$pageTitle ??= 'Kottyho kuchařka';
-$favoritesCount ??= 0;
+$pageTitle       ??= 'Kottyho kuchařka';
+$pageDescription ??= 'Kottyho kuchařka – objevujte, přidávejte a sdílejte oblíbené recepty.';
+$favoritesCount  ??= 0;
 
 ?>
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ $favoritesCount ??= 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($pageTitle) ?></title>
+    <meta name="description" content="<?= htmlspecialchars($pageDescription) ?>">
     <link rel="stylesheet" href="../assets/css/main.css?v=<?= filemtime(__DIR__ . '/../../assets/css/main.css') ?>">
     <style>
         @media (max-width: 768px) {
@@ -105,7 +107,6 @@ $favoritesCount ??= 0;
             </li>
             <!-- Mobil: přímé odkazy (bez dropdownu) -->
             <?php if (Auth::isLoggedIn()): ?>
-                <li class="nav-user-mobile"><a href="moje-recepty.php">Moje recepty</a></li>
                 <li class="nav-user-mobile"><a href="odhlasit.php">Odhlásit se</a></li>
             <?php else: ?>
                 <li class="nav-user-mobile"><a href="prihlasit.php">Přihlásit se</a></li>

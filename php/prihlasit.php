@@ -32,7 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle      = 'Přihlásit se – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Přihlásit se – Kottyho kuchařka';
+$pageDescription = 'Přihlaste se do Kottyho kuchařky a přidávejte vlastní recepty.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/prihlasit.php';

@@ -16,7 +16,8 @@ $myRecipes = $recipeRepo->getByUserId($user->id);
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 
-$pageTitle      = 'Moje recepty – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Moje recepty – Kottyho kuchařka';
+$pageDescription = 'Spravujte recepty, které jste přidali na Kottyho kuchařce.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/moje-recepty.php';

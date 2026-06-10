@@ -28,7 +28,8 @@ foreach ($favorites->getIds() as $id) {
     }
 }
 
-$pageTitle      = 'Oblíbené recepty – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Oblíbené recepty – Kottyho kuchařka';
+$pageDescription = 'Vaše oblíbené recepty uložené na Kottyho kuchařce.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/oblibene.php';

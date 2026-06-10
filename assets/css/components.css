@@ -583,9 +583,9 @@ a {
   inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 100%);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 0;
   color: #fff;
   font-size: 22px;
   font-weight: 700;

@@ -35,7 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle      = 'Kontakt – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Kontakt – Kottyho kuchařka';
+$pageDescription = 'Napište nám – kontaktní formulář Kottyho kuchařky. Rádi odpovíme na vaše dotazy a připomínky.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/kontakt.php';

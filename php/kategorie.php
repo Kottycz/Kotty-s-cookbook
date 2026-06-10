@@ -24,7 +24,8 @@ if ($category === null) {
 
 $recipes = $recipeRepo->getByCategorySlug($slug);
 
-$pageTitle      = htmlspecialchars($category->name) . ' – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = htmlspecialchars($category->name) . ' – Kottyho kuchařka';
+$pageDescription = 'Recepty v kategorii ' . $category->name . ' na Kottyho kuchařce. Vyberte si svůj oblíbený recept.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/kategorie.php';

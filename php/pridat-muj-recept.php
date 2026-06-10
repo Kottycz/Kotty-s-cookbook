@@ -119,7 +119,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle      = 'Přidat recept do knihovny – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Přidat recept do knihovny – Kottyho kuchařka';
+$pageDescription = 'Přidejte vlastní recept do vaší osobní knihovny receptů na Kottyho kuchařce.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/pridat-muj-recept.php';

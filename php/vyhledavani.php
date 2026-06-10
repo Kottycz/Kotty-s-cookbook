@@ -10,7 +10,8 @@ $favorites  = new Favorites();
 $query   = trim($_GET['q'] ?? '');
 $recipes = $query !== '' ? $recipeRepo->search($query) : [];
 
-$pageTitle      = 'Vyhledávání – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Vyhledávání – Kottyho kuchařka';
+$pageDescription = 'Hledejte recepty na Kottyho kuchařce podle názvu nebo ingrediencí.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/vyhledavani.php';

@@ -72,7 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle      = 'Registrace – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Registrace – Kottyho kuchařka';
+$pageDescription = 'Zaregistrujte se na Kottyho kuchařce a začněte přidávat vlastní recepty zdarma.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/registrovat.php';

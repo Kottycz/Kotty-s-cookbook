@@ -9,7 +9,8 @@ $favorites    = new Favorites();
 
 $categories = $categoryRepo->getAll();
 
-$pageTitle      = 'Kategorie receptů – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Kategorie receptů – Kottyho kuchařka';
+$pageDescription = 'Přehled všech kategorií receptů na Kottyho kuchařce – polévky, hlavní jídla, saláty, těstoviny, moučníky a nápoje.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/kategorie-receptu.php';

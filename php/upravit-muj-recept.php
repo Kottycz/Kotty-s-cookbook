@@ -133,7 +133,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $ingDefault   = implode("\n", array_map(fn($i) => trim($i->getFormattedAmount() . ' ' . $i->name), $ingredients));
 $stepsDefault = implode("\n", array_map(fn($s) => $s->description, $steps));
 
-$pageTitle      = 'Upravit: ' . $recipe->name . ' – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Upravit: ' . $recipe->name . ' – Kottyho kuchařka';
+$pageDescription = 'Upravte recept ' . $recipe->name . ' ve vaší osobní knihovně na Kottyho kuchařce.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/upravit-muj-recept.php';

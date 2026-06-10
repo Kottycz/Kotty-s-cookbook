@@ -11,7 +11,8 @@ $favorites    = new Favorites();
 $featured   = $recipeRepo->getFeaturedHourly(6);
 $categories = $categoryRepo->getAll();
 
-$pageTitle      = 'Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Kottyho kuchařka';
+$pageDescription = 'Kottyho kuchařka – objevujte, přidávejte a sdílejte oblíbené recepty. Polévky, hlavní jídla, saláty, moučníky a mnoho dalšího.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/index.php';

@@ -33,7 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm_delete'])) {
     exit;
 }
 
-$pageTitle      = 'Smazat: ' . $recipe->name . ' – Kottyho kuchařka';
-$favoritesCount = $favorites->count();
+$pageTitle       = 'Smazat: ' . $recipe->name . ' – Kottyho kuchařka';
+$pageDescription = 'Smazat recept ' . $recipe->name . ' z vaší osobní knihovny na Kottyho kuchařce.';
+$favoritesCount  = $favorites->count();
 
 require __DIR__ . '/views/smazat-muj-recept.php';
