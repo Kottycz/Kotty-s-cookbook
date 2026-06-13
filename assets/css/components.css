@@ -598,6 +598,120 @@ a {
 }
 
 /* =========================================
+   FILTRY RECEPTŮ
+   ========================================= */
+
+.recipes-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 24px 0 32px;
+    padding: 16px 24px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+.fdd {
+    position: relative;
+}
+
+.fdd__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #e26a2c;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 200ms;
+    white-space: nowrap;
+}
+
+.fdd__btn:hover {
+    background: #c85a20;
+}
+
+.fdd__arrow {
+    width: 16px;
+    height: 16px;
+    transition: transform 300ms;
+    flex-shrink: 0;
+}
+
+.fdd.open .fdd__arrow {
+    transform: rotate(180deg);
+}
+
+.fdd__menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+    padding: 6px;
+    list-style: none;
+    margin: 0;
+    min-width: 100%;
+    z-index: 1000;
+}
+
+.fdd.open .fdd__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.fdd__item {
+    display: block;
+    padding: 9px 14px;
+    border-radius: 8px;
+    color: #444;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 150ms, color 150ms;
+}
+
+.fdd__item:hover {
+    background: #fff5f0;
+    color: #e26a2c;
+}
+
+.fdd__item--active {
+    background: #fff0e8;
+    color: #e26a2c;
+    font-weight: 600;
+}
+
+.filter-reset {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    border-radius: 50px;
+    border: 1.5px solid #e8d5c8;
+    background: #fff5f0;
+    color: #e26a2c;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.18s ease;
+}
+
+.filter-reset:hover {
+    background: #e26a2c;
+    border-color: #e26a2c;
+    color: #fff;
+}
+
+/* =========================================
    7. CTA SEKCE (PŘIDAT RECEPT)
    ========================================= */
 

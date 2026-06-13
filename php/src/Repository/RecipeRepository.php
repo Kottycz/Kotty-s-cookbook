@@ -131,6 +131,30 @@ final class RecipeRepository
 		return array_map(RecipeDTO::fromRow(...), $stmt->fetchAll());
 	}
 
+	/** Vrátí veřejné recepty filtrované podle obtížnosti a celkového času. */
+	public function getFiltered(?int $difficultyId, ?string $time): array
+	{
+		$where = 'WHERE' . self::PUBLIC_FILTER;
+		$params = [];
+
+		if ($difficultyId !== null) {
+			$where .= ' AND r.difficulty_id = :difficultyId';
+			$params['difficultyId'] = $difficultyId;
+		}
+
+		if ($time === 'do30') {
+			$where .= ' AND (r.prep_time_minutes + r.cook_time_minutes) <= 30';
+		} elseif ($time === 'do60') {
+			$where .= ' AND (r.prep_time_minutes + r.cook_time_minutes) <= 60';
+		} elseif ($time === 'nad60') {
+			$where .= ' AND (r.prep_time_minutes + r.cook_time_minutes) > 60';
+		}
+
+		$stmt = $this->db->prepare(self::BASE_SELECT . ' ' . $where . ' ORDER BY r.created_at DESC');
+		$stmt->execute($params);
+		return array_map(RecipeDTO::fromRow(...), $stmt->fetchAll());
+	}
+
 	/** Vrátí všechny recepty daného uživatele (veřejné i soukromé). */
 	public function getByUserId(int $userId): array
 	{
